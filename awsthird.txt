@@ -1,0 +1,518 @@
+Domain Name System (DNS)
+
+Suppose that AnyCompany has a website hosted in the AWS Cloud.
+ Customers enter the web address into their browser, and they are able to access the website.
+ This happens because of Domain Name System (DNS) resolution. DNS resolution involves a customer DNS resolver communicating with a company DNS server.
+
+You can think of DNS as being the phone book of the internet.
+ DNS resolution is the process of translating a domain name to an IP address. 
+For example, suppose that you want to visit AnyCompany’s website. 
+
+1
+
+1
+When you enter the domain name into your browser, this request is sent to a customer DNS resolver. 
+
+2
+
+2
+The customer DNS resolver asks the company DNS server for the IP address that corresponds to AnyCompany’s website.
+
+3
+
+3
+The company DNS server responds by providing the IP address for AnyCompany’s website, 192.0.2.0.
+
+Amazon Route 53
+
+Amazon Route 53 is a DNS web service. It gives developers and businesses a reliable way to route end users to internet applications hosted in AWS. 
+
+Amazon Route 53 connects user requests to infrastructure running in AWS (such as Amazon EC2 instances and load balancers). It can route users to infrastructure outside of AWS.
+
+Another feature of Route 53 is the ability to manage the DNS records for domain names. 
+You can register new domain names directly in Route 53. You can also transfer DNS records for existing domain names managed by other domain registrars.
+ This enables you to manage all of your domain names within a single location.
+
+_______________________________________________________________________________________________________________
+Suppose that AnyCompany’s application is running on several Amazon EC2 instances. These instances are in an Auto Scaling group that attaches to an Application Load Balancer. 
+
+1
+
+1
+A customer requests data from the application by going to AnyCompany’s website. 
+
+2
+
+2
+Amazon Route 53 uses DNS resolution to identify AnyCompany.com’s corresponding IP address, 192.0.2.0. This information is sent back to the customer. 
+
+3
+
+3
+The customer’s request is sent to the nearest edge location through Amazon CloudFront. 
+
+4
+
+4
+Amazon CloudFront connects to the Application Load Balancer, which sends the incoming packet to an Amazon EC2 instance.
+________________________________________________________________________________________________________________________________________________________
+Your company has an application that uses Amazon EC2 instances to run the customer-facing website and
+ Amazon RDS database instances to store customers’ personal information.
+ How should the developer configure the VPC according to best practices?
+
+Place the Amazon EC2 instances in a private subnet and the Amazon RDS database instances in a public subnet.
+
+Place the Amazon EC2 instances in a public subnet and the Amazon RDS database instances in a private subnet.
+
+Place the Amazon EC2 instances and the Amazon RDS database instances in a public subnet.
+
+Place the Amazon EC2 instances and the Amazon RDS database instances in a private subnet.
+__________________________________________________________________________________________________________________________________________________________
+
+Which component can be used to establish a private dedicated connection between your company’s data center and AWS?
+
+Private subnet
+
+
+DNS
+
+
+AWS Direct Connect
+
+
+Virtual private gateway
+_____________________________________________________________________________________________________________________________________________________________
+Which statement best describes security groups?
+
+They are stateful and deny all inbound traffic by default.
+
+They are stateful and allow all inbound traffic by default.
+
+They are stateless and deny all inbound traffic by default.
+
+They are stateless and allow all inbound traffic by default.
+_______________________________________________________________________________________________________________________________
+Which component is used to connect a VPC to the internet?
+
+Public subnet
+
+Edge location
+
+Security group
+
+Internet gateway
+________________________________________________________________________________________________________________________________
+
+Instance stores
+
+Block-level storage volumes behave like physical hard drives.
+
+An instance store provides temporary block-level storage for an Amazon EC2 instance.
+ An instance store is disk storage that is physically attached to the host computer for an EC2 instance,
+ and therefore has the same lifespan as the instance. When the instance is terminated, you lose any data in the instance store.
+_____________________________________________________________________________________________________________________________________
+Amazon Elastic Block Store (Amazon EBS) is a service that provides block-level storage volumes that you can use with Amazon EC2 instances.
+ If you stop or terminate an Amazon EC2 instance, all the data on the attached EBS volume remains available.
+
+To create an EBS volume, you define the configuration (such as volume size and type) and provision it. After you create an EBS volume,
+ it can attach to an Amazon EC2 instance.
+
+Because EBS volumes are for data that needs to persist, it’s important to back up the data. You can take incremental backups of EBS volumes by creating Amazon EBS snapshots.
+
+___________________________________________________________________________________________________________________________________________
+
+Amazon Simple Storage Service (Amazon S3)
+
+Amazon Simple Storage Service (Amazon S3) is a service that provides object-level storage. Amazon S3 stores data as objects in buckets.
+
+You can upload any type of file to Amazon S3, such as images, videos, text files, and so on.
+ For example, you might use Amazon S3 to store backup files, media files for a website, or archived documents. 
+Amazon S3 offers unlimited storage space. The maximum file size for an object in Amazon S3 is 5 TB.
+
+When you upload a file to Amazon S3, you can set permissions to control visibility and access to it. You can also use the Amazon S3 versioning feature to track changes to your objects over time.
+
+Amazon S3 storage classes
+
+With Amazon S3, you pay only for what you use. You can choose from a range of storage classes to select a fit for your business and cost needs. When selecting an Amazon S3 storage class, consider these two factors:
+
+How often you plan to retrieve your data
+How available you need your data to be
+
+1)Amazon S3 Standard
+
+Amazon S3 Standard provides high availability for objects. 
+This makes it a good choice for a wide range of use cases, such as websites, content distribution, and data analytics.
+ Amazon S3 Standard has a higher cost than other storage classes intended for infrequently accessed data and archival storage.
+
+2)Amazon s3 Standard Infrequent Access
+
+ideal for infrequently accessed data
+Similar to Amazon S3 Standard but has a lower storage price and higher retrieval price
+Amazon S3 Standard-IA is ideal for data infrequently accessed but requires high availability when needed.
+ Both Amazon S3 Standard and Amazon S3 Standard-IA store data in a minimum of three Availability Zones. 
+
+3)Amazon s3 one zone Infrequent access
+
+Stores data in a single Availability Zone
+Has a lower storage price than Amazon S3 Standard-IA
+Compared to Amazon S3 Standard and Amazon S3 Standard-IA, which store data in a minimum of three Availability Zones, Amazon S3 One Zone-IA stores data in a single Availability Zone. This makes it a good storage class to consider if the following conditions apply:
+
+You want to save costs on storage.
+You can easily reproduce your data in the event of an Availability Zone failure.
+Amazon S3 Standard-IA provides the same level of availability as Amazon S3 Standard but with a lower storage price and a higher retrieval price.
+
+Amazon s3 Intelligent Tiering
+
+Ideal for data with unknown or changing access patterns
+Requires a small monthly monitoring and automation fee per object
+In the Amazon S3 Intelligent-Tiering storage class, Amazon S3 monitors objects’ access patterns. 
+If you haven’t accessed an object for 30 consecutive days, Amazon S3 automatically moves it to the infrequent access tier, 
+Amazon S3 Standard-IA. If you access an object in the infrequent access tier, Amazon S3 automatically moves it to the frequent access tier, Amazon S3 Standard.
+
+Amazon s3 Glacier Instant Retrieval
+
+Works well for archived data that requires immediate access
+
+Can retrieve objects within a few milliseconds
+
+When you decide between the options for archival storage, 
+consider how quickly you must retrieve the archived objects. 
+You can retrieve objects stored in the Amazon S3 Glacier Instant Retrieval storage class within milliseconds, 
+with the same performance as Amazon S3 Standard.
+
+Amazon s3 Glacier flexible retrieval
+
+Low-cost storage designed for data archiving
+Able to retrieve objects within a few minutes to hours
+Amazon S3 Glacier Flexible Retrieval is a low-cost storage class that is ideal for data archiving. 
+For example, you might use this storage class to store archived customer records or older photos and video files.
+
+Amazon s3 Glacier deep Archive
+
+Amazon S3 Deep Archive supports long-term retention and digital preservation for data that might be accessed once or twice in a year. 
+This storage class is the lowest-cost storage in the AWS Cloud, with data retrieval from 12 to 48 hours. 
+All objects from this storage class are replicated and stored across at least three geographically dispersed Availability Zones.
+
+Amazon s3 outposts
+
+Creates S3 buckets on Amazon S3 Outposts
+
+Makes it easier to retrieve, store, and access data on AWS Outposts
+
+Amazon S3 Outposts delivers object storage to your on-premises AWS Outposts environment.
+ Amazon S3 Outposts is designed to store data durably and redundantly across multiple devices and servers on your Outposts.
+ It works well for workloads with local data residency requirements that must satisfy demanding performance needs by keeping data close to on-premises applications.
+__________________________________________________________________________________________________________________________________________________________________
+
+You want to store data that is infrequently accessed but must be immediately available when needed. Which Amazon S3 storage class should you use?
+
+Amazon S3 Intelligent-Tiering
+
+
+Amazon S3 Glacier Deep Archive
+
+
+Amazon S3 Standard-IA
+_______________________________________________________________________________________________________________________________________________
+I
+
+
+Amazon S3 Glacier Flexible Retrieval
+__________________________________________________________________
+File storage
+
+In file storage, multiple clients (such as users, applications, servers, and so on) can access data that is stored in shared file folders.
+ In this approach, a storage server uses block storage with a local file system to organize files. Clients access data through file paths.
+
+Compared to block storage and object storage, file storage is ideal for use cases in which a large number of services and resources need to access the same data at the same time.
+
+Amazon Elastic File System (Amazon EFS) is a scalable file system used with AWS Cloud services and on-premises resources.
+ As you add and remove files, Amazon EFS grows and shrinks automatically.
+ It can scale on demand to petabytes without disrupting applications. 
+_____________________________________________________________________________
+
+Comparing EBS with elastic File storage
+
+EBS stores the data in a single availability zone
+To attach an amazon Ec2 instance to an EBS volume both the Ec2 and the EBs volume must reside in the same availability zone
+
+EFS stores data across multiple availability zones
+
+The duplicate storage allows you to access data concurrently from all availability zones in the region where a file system is located
+______________________________________________________________________________________________
+
+Amazon Relational Database Service
+
+Amazon Relational Database Service (Amazon RDS) is a service that enables you to run relational databases in the AWS Cloud.
+
+Amazon RDS is a managed service that automates tasks such as hardware provisioning, database setup, patching, and backups. With these capabilities, you can spend less time completing administrative tasks and more time using data to innovate your applications. You can integrate Amazon RDS with other services to fulfill your business and operational needs, such as using AWS Lambda to query your database from a serverless application.
+
+Amazon RDS provides a number of different security options. Many Amazon RDS database engines offer encryption at rest (protecting data while it is stored) and encryption in transit (protecting data while it is being sent and received).
+
+Amazon RDS database engines
+
+Amazon RDS is available on six database engines, which optimize for memory, performance, or input/output (I/O). Supported database engines include:
+
+Amazon Aurora
+PostgreSQL
+MySQL
+MariaDB
+Oracle Database
+Microsoft SQL Server
+
+Amazon Aurora
+
+Amazon Aurora is an enterprise-class relational database. It is compatible with MySQL and PostgreSQL relational databases. It is up to five times faster than standard MySQL databases and up to three times faster than standard PostgreSQL databases.
+
+Amazon Aurora helps to reduce your database costs by reducing unnecessary input/output (I/O) operations, while ensuring that your database resources remain reliable and available. 
+
+Consider Amazon Aurora if your workloads require high availability. It replicates six copies of your data across three Availability Zones and continuously backs up your data to Amazon S3.
+
+
+_____________________________________________________
+Nonrelational databases
+
+In a nonrelational database, you create tables. A table is a place where you can store and query data.
+
+Nonrelational databases are sometimes referred to as “NoSQL databases” because they use structures other than rows and columns to organize data. One type of structural approach for nonrelational databases is key-value pairs. With key-value pairs, data is organized into items (keys), and items have attributes (values). You can think of attributes as being different features of your data.
+
+In a key-value database, you can add or remove attributes from items in the table at any time. Additionally, not every item in the table has to have the same attributes. 
+
+
+
+Amazon DynamoDB
+
+Amazon DynamoDB is a key-value database service. It delivers single-digit millisecond performance at any scale.
+
+Amazon Redshift is a data warehousing service that you can use for big data analytics.
+
+ It offers the ability to collect data from many sources and helps you to understand relationships and trends across your data.
+__________________________________________________________________________________
+
+AWS Identity and Access Management (IAM)
+
+AWS Identity and Access Management (IAM) enables you to manage access to AWS services and resources securely.   
+
+IAM gives you the flexibility to configure access based on your company’s specific operational and security needs. You do this by using a combination of IAM features, which are explored in detail in this lesson:
+
+IAM users, groups, and roles
+IAM policies
+Multi-factor authentication
+You will also learn best practices for each of these features
+_________________________________________________________________________________
+IAM users
+
+An IAM user is an identity that you create in AWS. It represents the person or application that interacts with AWS services and resources. It consists of a name and credentials.
+
+By default, when you create a new IAM user in AWS, it has no permissions associated with it. To allow the IAM user to perform specific actions in AWS, such as launching an Amazon EC2 instance or creating an Amazon S3 bucket, you must grant the IAM user the necessary permissions.
+
+Best practice:
+
+We recommend that you create individual IAM users for each person who needs to access AWS.  
+
+Even if you have multiple employees who require the same level of access, you should create individual IAM users for each of them. This provides additional security by allowing each IAM user to have a unique set of security credentials.
+
+IAM policies
+
+An IAM policy is a document that allows or denies permissions to AWS services and resources.  
+
+IAM policies enable you to customize users’ levels of access to resources. For example, you can allow users to access all of the Amazon S3 buckets within your AWS account, or only a specific bucket.
+
+Best practice:
+
+Follow the security principle of least privilege when granting permissions. 
+
+By following this principle, you help to prevent users or roles from having more permissions than needed to perform their tasks. 
+
+For example, if an employee needs access to only a specific bucket, specify the bucket in the IAM policy. Do this instead of granting the employee access to all of the buckets in your AWS account.
+
+Example: IAM policy
+
+Here’s an example of how IAM policies work. Suppose that the coffee shop owner has to create an IAM user for a newly hired cashier. The cashier needs access to the receipts kept in an Amazon S3 bucket with the ID: AWSDOC-EXAMPLE-BUCKET.
+
+IAM groups
+
+An IAM group is a collection of IAM users. When you assign an IAM policy to a group, all users in the group are granted permissions specified by the policy.
+
+Here’s an example of how this might work in the coffee shop. Instead of assigning permissions to cashiers one at a time, the owner can create a “Cashiers” IAM group. The owner can then add IAM users to the group and then attach permissions at the group level. 
+
+IAM roles
+
+In the coffee shop, an employee rotates to different workstations throughout the day. Depending on the staffing of the coffee shop, this employee might perform several duties: work at the cash register, update the inventory system, process online orders, and so on. 
+
+When the employee needs to switch to a different task, they give up their access to one workstation and gain access to the next workstation. The employee can easily switch between workstations, but at any given point in time, they can have access to only a single workstation. This same concept exists in AWS with IAM roles.
+
+An IAM role is an identity that you can assume to gain temporary access to permissions.
+  
+Amazon Inspector
+Amazon Inspector helps to improve the security and compliance of applications by running automated security assessments. It checks applications for security vulnerabilities and deviations from security best practices, 
+such as open access to Amazon EC2 instances and installations of vulnerable software versions. 
+_________________________________________________________________________________________________________
+Amazon GuardDuty
+
+Amazon GuardDuty is a service that provides intelligent threat detection for your AWS infrastructure and resources.
+ It identifies threats by continuously monitoring the network activity and account behavior within your AWS environment.
+
+
+
+
+Before an IAM user, application, or service can assume an IAM role, they must be granted permissions to switch to the role. When someone assumes an IAM role, they abandon all previous permissions that they had under a previous role and assume the permissions of the new role. 
+
+__________________________________________________________________________________________________________________
+
+AWS Organizations
+
+Suppose that your company has multiple AWS accounts. You can use AWS Organizations to consolidate and manage multiple AWS accounts within a central location.
+
+When you create an organization, AWS Organizations automatically creates a root, which is the parent container for all the accounts in your organization. 
+
+In AWS Organizations, you can centrally control permissions for the accounts in your organization by using service control policies (SCPs).
+ SCPs enable you to place restrictions on the AWS services, resources, and individual API actions that users and roles in each account can access.
+
+In AWS Organizations, you can group accounts into organizational units (OUs) to make it easier to manage accounts with similar business or security requirements. When you apply a policy to an OU, all the accounts in the OU automatically inherit the permissions specified in the policy.  
+
+By organizing separate accounts into OUs, you can more easily isolate workloads or applications that have specific security requirements. 
+For instance, if your company has accounts that can access only the AWS services that meet certain regulatory requirements, 
+you can put these accounts into one OU. 
+Then, you can attach a policy to the OU that blocks access to all other AWS services that do not meet the regulatory requirements.
+_________________________________________________________________________________________________________________
+
+AWS Artifact
+
+Depending on your company’s industry, you may need to uphold specific standards. 
+An audit or inspection will ensure that the company has met those standards.
+
+AWS Artifact is a service that provides on-demand access to AWS security and compliance reports and select online agreements.
+ AWS Artifact consists of two main sections: AWS Artifact Agreements and AWS Artifact Reports.
+__________________________________________________________________________________________________________________________
+
+Denial-of-service attacks
+
+A denial-of-service (DoS) attack is a deliberate attempt to make a website or application unavailable to users.
+In a distributed denial-of-service (DDoS) attack, multiple sources are used to start an attack that aims to make a website or application unavailable. This can come from a group of attackers, or even a single attacker.
+ The single attacker can use multiple infected computers (also known as “bots”) to send excessive traffic to a website or application.
+
+To help minimize the effect of DoS and DDoS attacks on your applications, you can use AWS Shield.
+
+AWS Shield
+
+AWS Shield is a service that protects applications against DDoS attacks. AWS Shield provides two levels of protection: Standard and Advanced.
+
+______________________________________________________________________________
+AWS Key Management Service (AWS KMS) enables you to perform encryption operations through the use of cryptographic keys.
+ A cryptographic key is a random string of digits used for locking (encrypting) and unlocking (decrypting) data. 
+You can use AWS KMS to create, manage, and use cryptographic keys. 
+You can also control the use of keys across a wide range of services and in your applications.
+_________________________________________________________________________________
+AWS WAF is a web application firewall that lets you monitor network requests that come into your web applications. 
+
+AWS WAF works together with Amazon CloudFront and an Application Load Balancer.
+ Recall the network access control lists that you learned about in an earlier module.
+ AWS WAF works in a similar way to block or allow traffic. 
+However, it does this by using a web access control list (ACL) to protect your AWS resources. 
+_______________________________________________________________________________________
+AWS WAF is a web application firewall that helps protect your web applications or APIs against common web exploits that may affect availability, 
+compromise security, or consume excessive resources. 
+AWS WAF gives you control over how traffic reaches your applications by enabling you to create security rules that block common attack patterns such as SQL injection or cross-site scripting. 
+You can also use rate-based rules to mitigate the Web layer DDoS attack.
+_________________________________________________________________________________________________
+ Amazon CloudWatch is a monitoring and observability service built for DevOps engineers, developers, site reliability engineers (SREs), and IT managers.
+ CloudWatch provides data and actionable insights to monitor applications, respond to system-wide performance changes, optimize resource utilization, and get a unified view of operational health. 
+This is an excellent service for building Resilient systems.
+ Think resource performance monitoring, events, and alerts; think CloudWatch.
+ CloudWatch cannot be used to protect from web exploits such as SQL injection and cross-site scripting.
+___________________________________________________________________________________________________________
+Which AWS EC2 pricing model is the most cost-effective and flexible with no requirement for a long term resource commitment
+ or upfront payment but still guarantees that instance would not be interrupted?
+
+AWS Free Tier
+
+The AWS Free Tier enables you to begin using certain services without having to worry about incurring costs for the specified period. 
+
+Three types of offers are available: 
+
+Always Free
+12 Months Free
+Trials
+For each free tier offer, make sure to review the specific details about exactly which resource types are included. 
+______________________________________________________________________________________________________________
+AWS Support Plans
+
+AWS offers four different Support plans to help you troubleshoot issues, lower costs, and efficiently use AWS services. 
+
+You can choose from the following Support plans to meet your company’s needs: 
+
+Basic
+Developer
+Business
+
+Enterprise
+_____________________________________________________________________
+
+BASIC
+Basic Support
+
+Basic Support is free for all AWS customers.
+ It includes access to whitepapers, documentation, and support communities. 
+With Basic Support, you can also contact AWS for billing questions and service limit increases.
+
+With Basic Support, you have access to a limited selection of AWS Trusted Advisor checks.
+ Additionally, you can use the AWS Personal Health Dashboard, a tool that provides alerts and remediation guidance when AWS is experiencing events that may affect you. 
+
+DEVELOPER
+Customers in the Developer Support plan have access to features such as:
+
+Best practice guidance
+Client-side diagnostic tools
+Building-block architecture support, which consists of guidance for how to use AWS offerings, features, and services together
+
+For example, suppose that your company is exploring AWS services.
+ You’ve heard about a few different AWS services. 
+However, you’re unsure of how to potentially use them together to build applications that can address your company’s needs.
+ In this scenario, the building-block architecture support that is included with the Developer Support plan could help you to identify opportunities for combining specific services and features.
+
+If your company needs support beyond the Basic level, you could consider purchasing Developer, Business, Enterprise On-Ramp, and Enterprise Support.
+
+For example, suppose that your company is exploring AWS services. 
+You’ve heard about a few different AWS services.
+ However, you’re unsure of how to potentially use them together to build applications that can address your company’s needs.
+ In this scenario, the building-block architecture support that is included with the Developer Support plan 
+could help you to identify opportunities for combining specific services and features.
+
+_______________________________________________________________________________
+BUSUNESS
+Customers with a Business Support plan have access to additional features, including: 
+
+Use-case guidance to identify AWS offerings, features, and services that can best support your specific needs
+All AWS Trusted Advisor checks
+Limited support for third-party software, such as common operating systems and application stack components
+
+Suppose that your company has the Business Support plan and wants to install a common third-party operating system onto your Amazon EC2 instances. 
+You could contact AWS Support for assistance with installing, configuring, and troubleshooting the operating system.
+ For advanced topics such as optimizing performance, using custom scripts, or resolving security issues, 
+you may need to contact the third-party software provider directly.
+
+ENTERPRISE
+In addition to all features included in the Basic, Developer, Business, and Enterprise On-Ramp support plans, customers with Enterprise Support have access to:
+
+A designated Technical Account Manager to provide proactive guidance and coordinate access to programs and AWS experts
+
+A Concierge support team for billing and account assistance
+
+Operations Reviews and tools to monitor health
+
+Training and Game Days to drive innovation
+
+Tools to monitor costs and performance through Trusted Advisor and Health API/Dashboard
+
+The Enterprise plan also provides full access to proactive services, which are provided by a designated Technical Account Manager:
+
+Consultative review and architecture guidance
+
+Infrastructure Event Management support
+
+Cost Optimization Workshop and tools
+
+Support automation workflows
+
+15 minutes or less response time for business-critical issues

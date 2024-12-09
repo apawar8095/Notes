@@ -1,0 +1,126 @@
+Credits are applied in the following order:
+
+Soonest expiring
+
+Least number of applicable products
+
+Oldest credit
+
+For the given use case, credit one is applied, which expires in July,
+ to the Amazon EC2 charge which leaves you with a $900 Amazon EC2 charge and a $500 Amazon S3 charge.
+ Then, credit two is applied to the remaining $900 of Amazon EC2 usage.
+ You need to pay $850 for Amazon EC2 and $500 for Amazon S3. All your credits are now exhausted.
+___________________________________________________________________________________________________________
+Leverage AWS Professional Services to accelerate the infrastructure migration
+
+The AWS Professional Services organization is a global team of experts that can help you realize your desired business outcomes when using the AWS Cloud.
+ AWS Professional Services consultants can supplement your team with specialized skills and experience that can help you achieve quick results.
+ Therefore, leveraging AWS Professional Services can accelerate the infrastructure migration for the startup.
+
+Utilize AWS Partner Network (APN) to build a custom solution for this infrastructure migration
+
+The AWS Partner Network (APN) is the global partner program for technology and consulting businesses that leverage Amazon Web Services
+ to build solutions and services for customers. 
+The startup can work with experts from APN to build a custom solution for this infrastructure migration.
+__________________________________________________________________________________________________________
+Dedicated host
+
+Amazon EC2 Dedicated Hosts allow you to use your eligible software licenses from vendors such as Microsoft and Oracle on Amazon EC2.
+ An Amazon EC2 Dedicated Host is a physical server fully dedicated for your use, 
+so you can help address corporate compliance requirements.
+____________________________________________________________________________________________________
+Customer Managed CMK
+
+A customer master key (CMK) is a logical representation of a master key.
+ The CMK includes metadata, such as the key ID, creation date, description, and key state. 
+The CMK also contains the key material used to encrypt and decrypt data. 
+These are created and managed by the AWS customer.
+ Access to these can be controlled using the AWS IAM service.
+_________________________________________________________________________________________________________
+AWS Shield Standard and AWS Shield Advanced provide protections against Distributed Denial of Service (DDoS) attacks for AWS resources
+ at the network and transport layers (layer 3 and 4) and the application layer (layer 7).
+ A DDoS attack is an attack in which multiple compromised systems try to flood a target with traffic. 
+A DDoS attack can prevent legitimate end users from accessing the target services and can cause the target to crash due to overwhelming traffic volume.
+
+AWS Shield provides protection against a wide range of known DDoS attack vectors and zero-day attack vectors.
+ Shield detection and mitigation is designed to provide coverage against threats even if they are not explicitly known to the service at the time of detection.
+
+Classes of attacks that Shield detects include the following:
+
+Network volumetric attacks (layer 3) – This is a sub category of infrastructure layer attack vectors.
+ These vectors attempt to saturate the capacity of the targeted network or resource, to deny service to legitimate users.
+
+Network protocol attacks (layer 4) – This is a sub category of infrastructure layer attack vectors.
+ These vectors abuse a protocol to deny service to the targeted resource.
+ A common example of a network protocol attack is a TCP SYN flood, which can exhaust connection state on resources like servers, load balancers, or firewalls. 
+A network protocol attack can also be volumetric. For example, a larger TCP SYN flood may intend to saturate the capacity of a network while also exhausting the state of the targeted resource or intermediate resources.
+
+Application layer attacks (layer 7) – This category of attack vector attempts to deny service to legitimate users by flooding an application with queries that are valid 
+for the target, such as web request floods.
+AWS Shield Advanced provides expanded DDoS attack protection for web applications running on the following resources: Amazon Elastic Compute Cloud, Elastic Load Balancing (ELB), Amazon CloudFront, Amazon Route 53, AWS Global Accelerator.
+________________________________________________________________________________________________________________________
+A VPC endpoint enables you to privately connect your VPC to supported AWS services and VPC endpoint services powered by AWS PrivateLink without requiring an internet gateway, NAT device, VPN connection, or AWS Direct Connect connection. 
+Instances in your VPC do not require public IP addresses to communicate with resources in the service.
+ Traffic between your VPC and the other service does not leave the Amazon network.
+
+There are two types of VPC endpoints: interface endpoints and gateway endpoints.
+
+An interface endpoint is an elastic network interface with a private IP address from the IP address range of your subnet that serves as an entry point for traffic destined to a supported service.
+ Interface endpoints are powered by AWS PrivateLink, a technology that enables you to privately access services by using private IP addresses.
+
+A gateway endpoint is a gateway that you specify as a target for a route in your route table for traffic destined to a supported AWS service. 
+The following AWS services are supported:
+
+Amazon S3
+
+DynamoDB
+___________________________________________________________________________________________________________________________
+EFS" - Amazon EFS is a file storage service for use with Amazon EC2.
+ Amazon EFS provides a file system interface, file system access semantics, 
+and concurrently-accessible storage for up to thousands of Amazon EC2 instances.
+ Amazon EFS uses the Network File System protocol.
+_____________________________________________________________________________________________________________________________
+AWS CloudTrail is a service that enables governance, compliance, operational auditing, and risk auditing of your AWS account.
+ CloudTrail can be used to record AWS API calls and other activity for your AWS account and save the recorded information to log files in an Amazon Simple Storage Service (Amazon S3) bucket that you choose. 
+By default, the log files delivered by CloudTrail to your S3 bucket are encrypted using server-side encryption with Amazon S3–managed encryption keys (SSE-S3).
+__________________________________________________________________________________________________________________________________
+Amazon DynamoDB is a fully managed, serverless, key-value NoSQL database designed to run high-performance applications at any scale. DynamoDB offers built-in security, continuous backups, automated multi-region replication, in-memory caching, and data export tools.
+
+DynamoDB global tables replicate data automatically across your choice of AWS Regions and automatically 
+scale capacity to accommodate your workloads. With global tables, your globally distributed applications can access data locally in the selected regions
+ to get single-digit millisecond read and write performance. 
+DynamoDB offers active-active cross-region support that is needed for the company.
+__________________________________________________________________________________________________
+ AWS Glue is a fully managed extract, transform, and load (ETL) service that makes it easy for customers to prepare and load their data for analytics.
+_____________________________________________________________________________________________________
+AWS Compute Optimizer recommends optimal AWS resources for your workloads to reduce costs and improve performance 
+by using machine learning to analyze historical utilization metrics. 
+Over-provisioning resources can lead to unnecessary infrastructure costs, 
+and under-provisioning resources can lead to poor application performance.
+ Compute Optimizer helps you choose optimal configurations for three types of AWS resources: Amazon EC2 instances, Amazon EBS volumes, and AWS Lambda functions, 
+based on your utilization data.
+_______________________________________________________________________________________________________________
+Weighted routing policy
+
+Amazon Route 53 is a highly available and scalable cloud Domain Name System (DNS) web service.
+ It is designed to give developers and businesses an extremely reliable and cost-effective way to route end users to Internet applications
+ by translating names like www.example.com into the numeric IP addresses like 192.0.2.1 that computers use to connect to each other.
+_______________________________________________________________________________________________________________
+AWS X-Ray - You can use AWS X-Ray to analyze and debug serverless and distributed applications 
+ as those built using a microservices architecture. With X-Ray,
+ you can understand how your application and its underlying services are performing to identify and troubleshoot the root cause of performance
+ issues and errors.
+
+Weighted routing lets you associate multiple resources with a single domain name (example.com) or subdomain name
+ (acme.example.com) and choose how much traffic is routed to each resource. 
+This can be useful for a variety of purposes, including load balancing and testing new versions of software. 
+To configure weighted routing, you create records that have the same name and type for each of your resources. 
+You assign each record a relative weight that corresponds with how much traffic you want to send to each resource.
+ Amazon Route 53 sends traffic to a resource based on the weight that you assign to the record as a proportion of the total weight for all records in the group.
+
+_________________________________________________________________________________________________________________
+Amazon Macie is a fully managed data security and data privacy service that uses machine learning and pattern matching to discover and protect your sensitive data in AWS.
+ Macie automatically provides an inventory of Amazon S3 buckets including a list of unencrypted buckets, publicly accessible buckets, and buckets shared with AWS accounts 
+outside those you have defined in AWS Organizations.
+ Then, Macie applies machine learning and pattern matching techniques to the buckets you select to identify and alert you to sensitive data,
+ such as personally identifiable information (PII).

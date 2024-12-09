@@ -1,0 +1,58 @@
+Amazon SageMaker is a fully managed machine learning service. With SageMaker,
+ data scientists and developers can quickly and easily build and train machine learning models,
+ and then directly deploy them into a production-ready hosted environment.
+
+
+Amazon Augmented AI
+Amazon Augmented AI (Amazon A2I) adds the benefit of human judgment to any machine learning application.
+ When an AI application can't evaluate data with a high degree of confidence,
+ human reviewers can take over. 
+This human review is called a human review workflow. 
+To create and start a human review workflow, you need three resources: a worker task template, 
+a flow definition, and a human loop.
+_______________________________________________
+Amazon CodeGuru
+Amazon CodeGuru Reviewer is a service that uses program analysis and machine learning to detect potential defects 
+that are difficult for developers to find and offers suggestions for improving your Java and Python code.
+ This service has been released for general availability in several Regions.
+______________________________________________________
+Amazon DevOps Guru is a machine learning (ML) powered service that makes it easy to improve an application's operational performance and availability.
+ DevOps Guru detects behaviors that are different from normal operating patterns so you can identify operational issues long before they impact your customers. 
+DevOps Guru automatically ingests operational data from your AWS applications and provides a single dashboard to visualize issues in your operational data. 
+You can get started with DevOps Guru to improve application availability and reliability with no manual setup or machine learning expertise.
+__________________________________________________________
+Amazon Comprehend uses natural language processing (NLP) to extract insights about the content of documents without the need of any special preprocessing.
+ Amazon Comprehend processes any text files in UTF-8 format.
+ It develops insights by recognizing the entities, key phrases, language, sentiments, and other common elements in a document.
+ Use Amazon Comprehend to create new products based on understanding the structure of documents.
+ With Amazon Comprehend you can search social networking feeds for mentions of products, scan an entire document repository for key phrases, 
+or determine the topics contained in a set of documents.
+__________________________________________________________
+Amazon Polly is a service that turns text into lifelike speech,
+ enabling you to create applications that talk and build entirely new categories of speech-enabled products. 
+Amazon Polly is a Text-to-Speech (TTS) service that uses advanced deep learning technologies to synthesize speech that sounds like a human voice.
+___________________________________________________________________________
+Amazon Rekognition Video can detect objects, scenes, landmarks, faces, celebrities, text, 
+and inappropriate content in videos. You can also search for faces appearing in a video using your own repository or collection of face images.
+__________________________________________________________________________________
+Amazon Personalize
+Elevate the customer experience with ML-powered personalization
+Unify your data to create meaningful customer experiences across the entire user journey.
+Increase revenue and brand loyalty, and stand out from competitors by catering to individual customer preferences.
+___________________________________________________________________________________________
+AWS Infrastructure Event Management 
+AWS Infrastructure Event Management (IEM) offers architecture and scaling guidance and operational support during the preparation and 
+execution of planned events, such as shopping holidays, product launches, and migrations. 
+For these events, AWS Infrastructure Event Management will help you assess operational readiness, 
+identify and mitigate risks, and execute your event confidently with AWS experts by your side.
+ The program is included in the Enterprise Support plan and is available to Business Support customers for an additional fee.
+_________________________________________________________________
+Use Access Key ID and Secret Access Key to access AWS resources programmatically
+
+Access keys are long-term credentials for an IAM user or the AWS account root user. You can use access keys to sign programmatic requests to the AWS CLI or AWS API (directly or using the AWS SDK). Access keys consist of two parts: an access key ID and a secret access key. As a user name and password, you must use both the access key ID and secret access key together to authenticate your requests. When you create an access key pair, save the access key ID and secret access key in a secure location. The secret access key is available only at the time you create it. If you lose your secret access key, you must delete the access key and create a new one.
+________________________________________________________________
+AWS Compute Optimizer recommends optimal AWS resources for your workloads to reduce costs and improve performance by using machine learning to analyze historical utilization metrics. Over-provisioning resources can lead to unnecessary infrastructure costs, and under-provisioning resources can lead to poor application performance. Compute Optimizer helps you choose optimal configurations for three types of AWS resources: Amazon EC2 instances, Amazon EBS volumes, and AWS Lambda functions, based on your utilization data.
+
+Compute Optimizer recommends up to 3 options from 140+ EC2 instance types, as well as a wide range of EBS volume and Lambda function configuration options, to right-size your workloads. Compute Optimizer also projects what the CPU utilization, memory utilization, and run time of your workload would have been on recommended AWS resource options. This helps you understand how your workload would have performed on the recommended options before implementing the recommendations.
+
+How Compute Optimizer works:

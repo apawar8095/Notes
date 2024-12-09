@@ -1,0 +1,298 @@
+AWS Cloud MapS
+ Cloud Map is a cloud resource discovery service. With Cloud Map, you can define custom names for your application resources, and it maintains the updated location of these dynamically changing resources. 
+This increases your application availability because your web service always discovers the most up-to-date locations of its resources.
+
+Amazon CloudFront
+Securely deliver content with low latency and high transfer speeds
+Reduce latency by delivering data through 450+ globally dispersed Points of Presence (PoPs) with automated network mapping and intelligent routing.
+Improve security with traffic encryption and access controls, and use AWS Shield Standard to defend against DDoS attacks at no additional charge.
+Cut costs with consolidated requests, customizable pricing options, and zero fees for data transfer out from AWS origins.
+
+AWS CloudFormation 
+lets you model, provision, and manage AWS and third-party resources by treating infrastructure as code.
+code your information from scratch with the cloud formation template using yml or json
+
+AWS CloudTrail monitors and records account activity across your AWS infrastructure,
+ giving you control over storage, analysis, and remediation actions.
+Records activity and api usage in AWS services
+Deyect unusual api activity through cloud trail insights
+
+Amazon Cloud watch
+\
+Amazon CloudWatch collects and visualizes real-time logs, metrics, 
+and event data in automated dashboards to streamline your infrastructure and application maintenance.
+
+complete visibility to cloud resources and applications
+__________________________________________________________________________________________________________
+RESILIence
+The AWS Well-Architected Framework defines resilience as
+ “the capability to recover when stressed by load (more requests for service), 
+attacks (either accidental through a bug, or deliberate through intention), and failure of any component in the workload's components
+
+What is an example of agility in the AWS Cloud?
+Decreased acquisition time for new compute resources
+
+A user wants to deploy a service to the AWS Cloud by using infrastructure-as-code (IaC) principles.
+Which AWS service can be used to meet this requirement?
+AWs Cloud Formation
+
+Shared Controls – Controls which apply to both the infrastructure layer and customer layers, but in completely separate contexts or perspectives. In a shared control, AWS provides the requirements for the infrastructure and the customer must provide their own control implementation within their use of AWS services. Examples include:
+
+Patch Management – AWS is responsible for patching and fixing flaws within the infrastructure, but customers are responsible for patching their guest OS and applications.
+Configuration Management – AWS maintains the configuration of its infrastructure devices, but a customer is responsible for configuring their own guest operating systems, databases, and applications.
+Awareness & Training - AWS trains AWS employees, but a customer must train their own employees.
+
+__________________________________________________________________
+Elasticity
+The ability to acquire resources as you need them and release resources when you no longer need them. In the cloud, you want to do this automatically.
+
+__________________________________________________________________________________
+There are seven design principles for security in the cloud:
+
+Implement a strong identity foundation: Implement the principle of least privilege and enforce separation of duties with appropriate authorization for each interaction with your AWS resources. Centralize identity management, and aim to eliminate reliance on long-term static credentials.
+
+Enable traceability: Monitor, alert, and audit actions and changes to your environment in real time. Integrate log and metric collection with systems to automatically investigate and take action.
+
+Apply security at all layers: Apply a defense in depth approach with multiple security controls. Apply to all layers (for example, edge of network, VPC, load balancing, every instance and compute service, operating system, application, and code).
+
+Automate security best practices: Automated software-based security mechanisms improve your ability to securely scale more rapidly and cost-effectively. Create secure architectures, including the implementation of controls that are defined and managed as code in version-controlled templates.
+
+Protect data in transit and at rest: Classify your data into sensitivity levels and use mechanisms, such as encryption, tokenization, and access control where appropriate.
+
+Keep people away from data: Use mechanisms and tools to reduce or eliminate the need for direct access or manual processing of data. This reduces the risk of mishandling or modification and human error when handling sensitive data.
+
+Prepare for security events: Prepare for an incident by having incident management and investigation policy and processes that align to your organizational requirements. Run incident response simulations and use tools with automation to increase your speed for detection, investigation, and recovery.
+
+Amazon Macie is a data security service that uses machine learning (ML) and pattern matching to discover and help protect your sensitive data.
+Which AWS service aggregates, organizes, and prioritizes security alerts and findings from multiple AWS services?
+AWS HUb
+
+To request temporary security credentials, you can use AWS Security Token Service (AWS STS) operations in the AWS API. These include operations to create ...
+
+
+Which AWS service will help a company identify the user who deleted an Amazon EC2 instance yesterday?
+amazon cloud trail
+
+A company is planning to replace its physical on-premises compute servers with AWS serverless compute services. The company wants to be able to take advantage of advanced technologies quickly after the migration.
+Which pillar of the AWS Well-Architected Framework does this plan represent?
+
+Performance Efficiency
+
+Which duties are the responsibility of a company that is using AWS Lambda? 
+Security inside of code
+ Writing and updating of code
+
+________________________________________________________________________________--
+
+Which AWS services or features provide disaster recovery solutions for Amazon EC2 instances? (Choose two.)
+EC2 Amazon Machine Images (AMIs) Most Voted
+C. Amazon Elastic Block Store (Amazon EBS) snapshots 
+
+A company wants to review its monthly costs of using Amazon EC2 and Amazon RDS for the past year.
+Which AWS service or tool provides this information?
+COST EXplorer
+
+A company wants to migrate a critical application to AWS. The application has a short runtime. The application is invoked by changes in data or by shifts in system state. The company needs a compute solution that maximizes operational efficiency and minimizes the cost of running the application.
+Which AWS solution should the company use to meet these requirements?
+AWS Lambda
+
+___________________________________________________________________________________
+A company plans to create a data lake that uses Amazon S3.
+Which factor will have the MOST effect on cost?
+A. The selection of S3 storage tiers Most Voted
+____________________________________________________________________________________
+A company is launching an ecommerce application that must always be available. The application will run on Amazon EC2 instances continuously for the next
+12 months.
+What is the MOST cost-effective instance purchasing option that meets these requirements?
+SAVINGS PLAN
+___________________________________________________________________________________________
+Which AWS service or feature can a company use to determine which business unit is using specific AWS resources?
+Cost Allocation Tags
+A company wants to migrate its workloads to AWS, but it lacks expertise in AWS Cloud computing.
+Which AWS service or feature will help the company with its migration?
+AWS Managed SErvices
+______________________________________________________________________________________________________
+Which AWS service or tool should a company use to centrally request and track service limit increases?
+Service quotas
+____________________________________________________________________________________________________________
+A company needs to simultaneously process hundreds of requests from different users.
+Which combination of AWS services should the company use to build an operationally efficient solution?
+Amazon Simple Queue Service (Amazon SQS) and AWS Lambda Most Voted___________________________________________
+______________________________________________________________________________________________________________________
+What is the scope of a VPC within the AWS network?
+A VPC can span all Availability Zones within an AWS Region.
+______________________________________________________________________--
+What are some advantages of using Amazon EC2 instances to host applications in the AWS Cloud instead of on premises? (Choose two.)
+EC2 has a flexible, pay-as-you-go pricing model. Most VotedMost Voted
+E. EC2 has automatic storage cost optimization. Most Voted
+ 
+A user needs to determine whether an Amazon EC2 instance's security groups were modified in the last month.
+How can the user see if a change was made?
+cloud trail
+
+__________________________________________________________________________
+A global media company uses AWS Organizations to manage multiple AWS accounts.
+Which AWS service or feature can the company use to limit the access to AWS services for member accounts?
+Service Control policy
+_______________________________________________________________________________________
+A company wants to limit its employees' AWS access to a portfolio of predefined AWS resources.
+Which AWS solution should the company use to meet this requirement?
+AWS Service catlog
+___________________________________________________________________________________________
+Which of the following are features of network ACLs as they are used in the AWS Cloud? (Choose two.)
+They are stateless. 
+They process rules in order, starting with the lowest numbered rule, when deciding whether to allow traffic.
+____________________________________________________________________________________________________________________
+A company wants to improve the overall availability and performance of its applications that are hosted on AWS.
+Which AWS service should the company use?
+A. Aws Global accelerator
+Which AWS service or feature identifies whether an Amazon S3 bucket or an IAM role has been shared with an external entity?
+Which AWS service or feature identifies whether an Amazon S3 bucket or an IAM role has been shared with an external entity?
+ AWS IAM Access Analyzer 
+A company does not want to rely on elaborate forecasting to determine its usage of compute resources. Instead, the company wants to pay only for the resources that it uses. The company also needs the ability to increase or decrease its resource usage to meet business requirements.
+Which pillar of the AWS Well-Architected Framework aligns with these requirements?
+Cost optimization
+A company wants to launch its workload on AWS and requires the system to automatically recover from failure.
+Which pillar of the AWS Well-Architected Framework includes this requirement?
+Reliability
+A large enterprise with multiple VPCs in several AWS Regions around the world needs to connect and centrally manage network connectivity between its VPCs.
+Which AWS service or feature meets these requirements?
+AWS Transit Gateway
+_________________________________________________________________
+Which AWS service should be used to monitor Amazon EC2 instances for CPU and network utilization?
+Cloud watch
+_________________________________________________
+A company has a physical tape library to store data backups. The tapWhich AWS service can be used to turn text into lifelike speech?e library is running out of space. The company needs to extend the tape library's capacity to the AWS Cloud.
+Which AWS service should the company use to meet this requirement?
+AWS Storage Gateway
+AWS Storage Gateway is a set of hybrid cloud storage services that provide on-premises access to virtually unlimited cloud storage.
+Which AWS service can be used to turn text into lifelike speech?
+Amazon Polly
+A company is designing its AWS workloads so that components can be updated regularly and so that changes can be made in small, reversible increments.
+Which pillar of the AWS Well-Architected Framework does this design support?
+A company is designing its AWS workloads so that components can be updated regularly and so that changes can be made in small, reversible increments.
+Which pillar of the AWS Well-Architected Framework does this design support?
+operational Excelllence
+Using AWS Config to record, audit, and evaluate changes to AWS resources to enable traceability is an example of which AWS Well-Architected Framework pillar?
+security
+
+Which AWS service can be used to decouple applications?
+Amazon simple queue service
+Which design principle is included in the operational excellence pillar of the AWS Well-Architected Framework?
+Anticipate failure
+Why is an AWS Well-Architected review a critical part of the cloud design process?
+A Well-Architected review helps identify design gaps and helps evaluate design decisions and related documents.
+A company implements an Amazon EC2 Auto Scaling policy along with an Application Load Balancer to automatically recover unhealthy applications that run on
+Amazon EC2 instances.
+Which pillar of the AWS Well-Architected Framework does this action cover?
+Reliability
+Under the AWS shared responsibility model, which task is the customer's responsibility when managing AWS Lambda functions?
+creating versions of lambda functions
+What does the AWS Concierge Support team provide?
+Billing Assisstance
+Under the AWS shared responsibility model, which task is the customer's responsibility when managing AWS Lambda functions?
+A. Creating versions of Lambda functions
+_____________________________________
+Which AWS service is always provided at no charge?
+AWS Identity and Access Management (IAM)
+A company wants to migrate a small website and database quickly from on-premises infrastructure to the AWS Cloud. The company has limited operational knowledge to perform the migration.
+Which AWS service supports this use case?
+Amazon Light sail
+A company needs to implement identity management for a fleet of mobile apps that are running in the AWS Cloud.
+Which AWS service will meet this requirement?
+A. Amazon Cognito Most Voted
+A company's web application requires AWS credentials and authorizations to use an AWS service.
+Which IAM entity should the company use as best practice?
+IAM Role
+A company is starting to build its infrastructure in the AWS Cloud. The company wants access to technical support during business hours. The company also wants general architectural guidance as teams build and test new applications.
+Which AWS Support plan will meet these requirements at the LOWEST cost?
+A. 
+B. AWS Developer Support Most Voted
+A company needs to evaluate its AWS environment and provide best practice recommendations in five categories: cost, performance, service limits, fault tolerance, and security.
+Which AWS service can the company use to meet these requirements?
+A. AWS TRUSTED ADVISOR
+Which of the following is a managed AWS service that is used specifically for extract, transform, and load (ETL) data?
+A. Amazon Glue
+hared Controls – Controls which apply to both the infrastructure layer and customer layers, but in completely separate contexts or perspectives. In a shared control, AWS provides the requirements for the infrastructure and the customer must provide their own control implementation within their use of AWS services. Examples include:
+
+1. Patch Management – AWS is responsible for patching and fixing flaws within the infrastructure, but customers are responsible for patching their guest OS and applications.
+
+2. Configuration Management – AWS maintains the configuration of its infrastructure devices, but a customer is responsible for configuring their own guest operating systems, databases, and applications.
+3.
+Awareness & Training - AWS trains AWS employees, but a customer must train their own employees.
+A company needs to set up user authentication for a new application. Users must be able to sign in directly with a user name and password, or through a third- party provider.
+Which AWS service should the company use to meet these requirements?
+A. 
+C. Amazon Cognito Most Voted
+
+A financial services company wants to ensure that its AWS account activity meets the governance, compliance and auditing norms.
+ As a Cloud Practitioner, which AWS service would you recommend for this use-case?
+AWS Cloud Trail
+________________________________________
+Which of the following AWS services has encryption enabled by default?
+Cloud trail
+_______________________________________
+AWS Web Application Firewall (WAF) offers protection from common web exploits at which layer?
+Layer 7
+Which of the following is CORRECT regarding removing an AWS account from AWS Organizations?
+Standalone account
+Which of the following are the storage services offered by the AWS Cloud? (Select two)
+S3
+Elastic File Storage
+A multi-national corporation wants to get expert professional advice on migrating to AWS and managing their applications on AWS Cloud. 
+Which of the following entities would you recommend for this engagement?
+AWS Consulting Partner
+
+
+Multi AZ (Availability Zone) deployment is an example of which of the following?
+Availability
+
+Which AWS service or feature identifies whether an Amazon S3 bucket or an IAM role has been shared with an external entity?
+
+C. AWS IAM Access Analyzer Most 
+
+Which AWS service supports the creation of visual reports from AWS Cost and Usage Report data?
+A. AWS QUICK SIGHT
+Which IT controls do AWS and the customer share, according to the AWS shared responsibility model? (Choose two.)
+Patch management
+C. Cloud awareness and training
+A company wants to convert video files and audio files from their source format into a format that will play on smartphones, tablets, and web browsers.
+Which AWS service will meet these requirements?
+Amazon Elastic Transcoder
+
+A company has a physical tape library to store data backups. The tape library is running out of space. The company needs to extend the tape library's capacity to the AWS Cloud.
+Which AWS service should the company use to meet this requirement?
+AWS Storage Gateway
+
+Using AWS Config to record, audit, and evaluate changes to AWS resources to enable traceability is an example of which AWS Well-Architected Framework pillar?
+A. Security
+A company wants to perform sentiment analysis on customer service email messages that it receives. The company wants to identify whether the customer service engagement was positive or negative.
+Which AWS service should the company use to perform this analysis?
+Amazon Comprehend
+A company implements an Amazon EC2 Auto Scaling policy along with an Application Load Balancer to automatically recover unhealthy applications that run on
+Amazon EC2 instances.
+Which pillar of the AWS Well-Architected Framework does this action cover?
+Reliability
+
+What does the AWS Concierge Support team provide?
+A primary point of contact for AWS Billing and AWS Support
+
+Which task does AWS perform automatically?
+Encrypt data that is stored in Amazon DynamoDB. 
+
+A company wants to improve its security and audit posture by limiting Amazon EC2 inbound access.
+What should the company use to access instances remotely instead of opening inbound SSH ports and managing SSH keys?
+A. EC2 key pairs
+B. AWS Systems Manager Session Manager Most Voted
+
+
+
+
+
+
+
+
+
+
+
+

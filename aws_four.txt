@@ -1,0 +1,187 @@
+Amazon CloudFront is a web service that speeds up distribution of your static and dynamic web content,
+ such as .html, .css, .js, and image files, to your users.
+
+ CloudFront delivers your content through a worldwide network of data centers called edge locations.
+ When a user requests content that you're serving with CloudFront,
+ the request is routed to the edge location that provides the lowest latency (time delay), 
+
+so that content is delivered with the best possible performance.
+
+If the content is already in the edge location with the lowest latency, CloudFront delivers it immediately.
+
+If the content is not in that edge location, CloudFront retrieves it from an origin that you've defined—such as an Amazon S3 bucket, a MediaPackage channel, or an HTTP server (for example, a web server) that you have identified as the source for the definitive version of your content.
+
+
+Edge location
+A site that CloudFront uses to cache copies of your content for faster delivery to users at any location.
+
+
+____________________________________________________________________________________________________________________
+
+Amazon cloud watch
+
+What is Amazon CloudWatch?
+PDF
+RSS
+Amazon CloudWatch monitors your Amazon Web Services (AWS) resources and the applications you run on AWS in real time. 
+You can use CloudWatch to collect and track metrics, which are variables you can measure for your resources and applications.
+
+The CloudWatch home page automatically displays metrics about every AWS service you use.
+ You can additionally create custom dashboards to display metrics about your custom applications, and display custom collections of metrics that you choose.
+
+You can create alarms that watch metrics and send notifications or automatically make changes to the resources you are monitoring when a threshold is breached. 
+For example, you can monitor the CPU usage and disk reads and writes of your Amazon EC2 instances and then use that data to determine whether you should launch additional instances to handle increased load. You can also use this data to stop under-used instances to save money.
+
+With CloudWatch, you gain system-wide visibility into resource utilization, application performance, and operational health.
+____________________________________________________________________
+AWS CloudTrail is an AWS service that helps you enable operational and risk auditing, governance, and compliance of your AWS account. 
+
+Actions taken by a user, role, or an AWS service are recorded as events in CloudTrail. Events include actions taken in the AWS Management Console, AWS Command Line Interface, and AWS SDKs and APIs.
+
+CloudTrail is enabled on your AWS account when you create it. When activity occurs in your AWS account, that activity is recorded in a CloudTrail event. You can easily view recent events in the CloudTrail console by going to Event history. For an ongoing record of activity and events in your AWS account, create an event data store or create a trail. For more information about CloudTrail pricing, see AWS CloudTrail Pricing.
+
+Visibility into your AWS account activity is a key aspect of security and operational best practices. You can use CloudTrail to view, search, download, archive, analyze, and respond to account activity across your AWS infrastructure. You can identify who or what took which action, what resources were acted upon, when the event occurred, and other details to help you analyze and respond to activity in your AWS account. Optionally, you can enable AWS CloudTrail Insights on a trail to help you identify and respond to unusual activity.
+
+You can integrate CloudTrail into applications using the API, automate trail creation for your organization, check the status of event data stores and trails you create, and control how users view CloudTrail events.
+
+How CloudTrail works
+PDF
+RSS
+CloudTrail is enabled on your AWS account when you create it. When activity occurs in your AWS account,
+ that activity is recorded in a CloudTrail event. You can easily view events in the CloudTrail console by going to Event history.
+
+Event history allows you to view, search, and download the past 90 days of activity in your AWS account.
+ In addition, you can create a CloudTrail trail to archive, analyze, and respond to changes in your AWS resources.
+ A trail is a configuration that enables delivery of events to an Amazon S3 bucket that you specify.
+ You can also deliver and analyze events in a trail with Amazon CloudWatch Logs and Amazon EventBridge.
+ You can create a trail with the CloudTrail console, the AWS CLI, or the CloudTrail API.
+____________________________________________________________________________________________________________
+AWS Cost Explorer is a tool that enables you to view and analyze your costs and usage. You can explore your usage and costs using the main graph, the Cost Explorer cost and usage reports, or the Cost Explorer RI reports. 
+You can view data for up to the last 12 months, forecast how much you're likely to spend for the next 12 months, and get recommendations for what Reserved Instances to purchase.
+ You can use Cost Explorer to identify areas that need further inquiry and see trends that you can use to understand your costs.
+
+You can view your costs and usage using the Cost Explorer user interface free of charge. You can also access your data programmatically using the Cost Explorer API. Each paginated API request incurs a charge of $0.01. You can't disable Cost Explorer after you enable it.
+
+In addition, Cost Explorer provides preconfigured views that display at-a-glance information about your cost trends and give you a head start on customizing views that suit your needs.
+
+When you first sign up for Cost Explorer, AWS prepares the data about your costs for the current month and the last 12 months, and then calculates the forecast for the next 12 months
+Managing your costs with AWS Budgets
+PDF
+RSS
+
+You can use AWS Budgets to track and take action on your AWS costs and usage.
+ You can use AWS Budgets to monitor your aggregate utilization and coverage metrics for your Reserved Instances (RIs) or Savings Plans. 
+
+
+You can use AWS Budgets to enable simple-to-complex cost and usage tracking. Some examples include:
+
+Setting a monthly cost budget with a fixed target amount to track all costs associated with your account. 
+You can choose to be alerted for both actual (after accruing) and forecasted (before accruing) spends.
+
+Under the AWS Shared Responsibility Model, 
+
+AWS Budgets information is updated up to three times a day. Updates typically occur 8–12 hours after the previous update. Budgets can track your unblended, amortized, and blended costs. Budgets can include or exclude charges such as discounts, refunds, support fees, and taxes.
+
+You can create the following types of budgets:
+
+Cost budgets – Plan how much you want to spend on a service.
+
+Usage budgets – Plan how much you want to use one or more services.
+
+RI utilization budgets – Define a utilization threshold and receive alerts when your RI usage falls below that threshold. This lets you see if your RIs are unused or under-utilized.
+
+q1)which of the following is a shared responsibility of both AWS and the customer?
+
+Configuration Management
+
+Availabilility zone infrastructure management
+
+Infrastructure maintenance of amazon s3 storage services
+
+
+__________________________________________________________________________
+Infrastructure as a Service (IaaS)
+
+
+Which AWS Support plan provides architectural guidance contextual to your specific use-cases?
+
+
+
+___________________________________________________________________________
+AWS DIRECT CONNECT
+AWS Direct Connect is a cloud service solution that makes it easy to establish a dedicated network connection
+ from your premises to AWS. You can use AWS Direct Connect to establish a private virtual interface 
+from your on-premise network directly to your Amazon VPC, providing you with a private,
+ high bandwidth network connection between your network and your VPC.
+ This connection is private and does not go over the public internet.
+ It takes at least a month to establish this physical connection.
+_______________________________________________________________________________________
+
+AWS Trusted Advisor - AWS Trusted Advisor is an online tool that provides you real-time guidance to help you provision your resources following AWS best practices.
+ Whether establishing new workflows, developing applications, or as part of ongoing improvement, recommendations provided by Trusted Advisor regularly help keep your solutions provisioned optimally.
+
+AWS Secrets Manager - AWS Secrets Manager helps you protect secrets needed to access your applications, services, and IT resources. 
+The service enables you to easily rotate, manage, and retrieve database credentials, API keys, and other secrets throughout their lifecycle. Users and applications retrieve secrets with a call to Secrets Manager APIs, eliminating the need to hardcode sensitive information in plain text.
+
+AWS Systems Manager - AWS Systems Manager gives you visibility and control of your infrastructure on AWS. Systems Manager provides a unified user interface so you can view operational data from multiple AWS services and allows you to automate operational tasks across your AWS resources. With Systems Manager, you can group resources, like Amazon EC2 instances, Amazon S3 buckets, or Amazon RDS instances, by application, view operational data for monitoring and troubleshooting, and take action on your groups of resources.
+
+____________________________________________________________________________________________
+Cloud Computing can be broadly divided into three types -
+ Infrastructure as a Service (IaaS)
+ Platform as a Service (PaaS)
+ Software as a Service (SaaS).
+
+
+EFS" - Amazon EFS is a file storage service for use with Amazon EC2. Amazon EFS provides a file system interface, file system access semantics, and concurrently-accessible storage for up to thousands of Amazon EC2 instances. Amazon EFS uses the Network File System protocol.
+IaaS contains the basic building blocks for cloud IT. 
+It typically provides access to networking features, 
+computers (virtual or on dedicated hardware), and data storage space. 
+IaaS gives the highest level of flexibility and management control over IT resources.
+
+EC2 gives you full control over managing the underlying OS, virtual network configurations, storage, data and applications.
+ So EC2 is an example of an IaaS service.
+
+Platform as a Service (PaaS) - 
+
+PaaS removes the need to manage underlying infrastructure (usually hardware and operating systems),
+ and allows you to focus on the deployment and management of your applications. 
+You don’t need to worry about resource procurement, capacity planning, software maintenance, patching, or any of the other undifferentiated heavy lifting involved in running your application.
+
+Elastic Beanstalk is an example of a PaaS service.
+ 
+You can simply upload your code and Elastic Beanstalk automatically handles the deployment, 
+from capacity provisioning, load balancing, auto-scaling to application health monitoring.
+
+Software as a Service (SaaS) -
+ SaaS provides you with a complete product that is run and managed by the service provider. 
+With a SaaS offering, you don’t have to think about how the service is maintained or how the underlying infrastructure is managed.
+ You only need to think about how you will use that particular software.
+ AWS Rekognition is an example of a SaaS service.
+
+______________________________________________________________________________
+AWS Shield Standard
+
+AWS Shield Standard defends against most common, frequently occurring network and transport layer DDoS attacks 
+that target your website or applications. 
+While AWS Shield Standard helps protect all AWS customers,
+ you get better protection if you are using Amazon CloudFront and Amazon Route 53. 
+All AWS customers benefit from the automatic protections of AWS Shield Standard, at no additional charge.
+
+Incorrect options:
+
+AWS Web Application Firewall (AWS WAF) - 
+AWS WAF is a web application firewall that lets you monitor the HTTP(S) requests that are forwarded
+ to an Amazon CloudFront distribution, an Amazon API Gateway API, or an Application Load Balancer.
+ AWS WAF charges based on the number of web access control lists (web ACLs) that you create, 
+the number of rules that you add per web ACL, and the number of web requests that you receive (it is not a free service).
+
+AWS Secrets Manager - AWS Secrets Manager helps you protect secrets needed to access your applications,
+ services, and IT resources. The service enables you to easily rotate, manage, and retrieve database credentials, API keys, and other secrets throughout their lifecycle. With Secrets Manager, you pay based on the number of secrets stored and API calls made.
+
+AWS Shield Advanced - AWS Shield Advanced includes intelligent DDoS attack detection and mitigation for not only for network layer (layer 3) and transport layer (layer 4) attacks but also for application layer (layer 7) attacks. AWS Shield Advanced is a paid service that provides additional protections for internet-facing applications.
+
+Reference: https://docs.aws.amazon.com/waf/latest/developerguide/shield-chapter.html
+AWS CloudFormation - AWS CloudFormation allows you to use programming languages or a simple text file to model and provision, in an automated and secure manner, all the resources needed for your applications across all regions and accounts. CloudFormation is not covered under AWS Shield Advanced.
+
+AWS Elastic Beanstalk - AWS Elastic Beanstalk is an easy-to-use service for deploying and scaling web applications and services developed with various programming languages. 
+You can simply upload your code and Elastic Beanstalk automatically handles the deployment, from capacity provisioning, load balancing, auto-scaling to application health monitoring. Elastic Beanstalk is covered under AWS Shield Standard. Advanced coverage is not offered for this service.
